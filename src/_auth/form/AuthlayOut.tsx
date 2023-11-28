@@ -7,13 +7,13 @@ const AuthlayOut = () => {
         <Navigate to="/" />
       ) : (
         <>
-          <section className=" flex flex-1 justify-center  flex-col py-10 items-">
+          <section className=" flex flex-2 justify-center flex-auto py-10 item-center ">
             <Outlet />
           </section>
           <img
             src="/assets/images/side-img.svg"
             alt="logo"
-            className=" hidden xl:block h-screen w-1/2 object-cover bg-no-repeat"
+            className=" hidden lg:block h-screen w-1/2 object-cover bg-no-repeat"
           />
         </>
       )}
