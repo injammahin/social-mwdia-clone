@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -32,10 +31,15 @@ const Signupform = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof SignUpValidation>) {
-    // Do something with the form values.
+  async function onSubmit(values: z.infer<typeof SignUpValidation>) {
+    const newUser = await createUserAcount(values);
+    // Do something with the form val
     // ✅ This will be type-safe and validated.
-    console.log(values);
+
+    // if (!newUser) {
+    //   return;
+    // }
+    console.log(newUser);
   }
 
   return (
@@ -137,3 +141,11 @@ const Signupform = () => {
   );
 };
 export default Signupform;
+function createUserAcount(_values: {
+  name: string;
+  username: string;
+  email: string;
+  password: string;
+}) {
+  throw new Error("Function not implemented.");
+}
