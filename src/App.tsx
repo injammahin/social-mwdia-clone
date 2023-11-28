@@ -3,8 +3,9 @@ import { Home } from "./_root/pages";
 import "./globals.css";
 import AuthlayOut from "./_auth/form/AuthlayOut";
 import Rootlayout from "./_root/pages/Rootlayout";
-import SignOutForm from "./_auth/form/signOutForm";
-import Signinform from "./_auth/form/signinform";
+import Signupform from "./_auth/form/signupForm";
+import Signinform from "./_auth/form/Signinform";
+
 // import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
@@ -13,8 +14,7 @@ const App = () => {
         {/*public route*/}
         <Route element={<AuthlayOut />}>
           <Route path="/sign-in" element={<Signinform />} />
-
-          <Route path="/sign-up" element={<SignOutForm />} />
+          <Route path="/sign-up" element={<Signupform />} />
         </Route>
 
         {/*private route*/}
