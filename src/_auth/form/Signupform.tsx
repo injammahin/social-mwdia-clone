@@ -18,7 +18,7 @@ import Loader from "@/components/shared/Loader";
 import { Link } from "react-router-dom";
 
 const Signupform = () => {
-  const isLoading = false;
+  const isLoading = true;
   // 1. Define your form.
   const form = useForm<z.infer<typeof SignUpValidation>>({
     resolver: zodResolver(SignUpValidation),
